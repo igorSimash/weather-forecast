@@ -10,7 +10,7 @@ const WeatherDay = ({text, day, temp}) => {
     return (
         <div className={'flex flex-col uppercase text-center'}>
             <span className={'font-bold text-xl mx-auto sm:text-lg'}>
-                {Days[(new Date(day)).getDay()].slice(0,3)}
+                {Days[(new Date(day)).getDay()].slice(0, 3)}
             </span>
             {
                 text.toLowerCase().includes('rain')
@@ -29,15 +29,16 @@ const WeatherDay = ({text, day, temp}) => {
                             <BsSun/>
                         </span>
             }
-            <span className={'text-3xl font-semibold tracking-wide mx-auto mt-2 sm:text-lg ' }>
+            <span className={'text-3xl font-semibold tracking-wide mx-auto mt-2 sm:text-lg '}>
                 {temp}
             </span>
-            <span className={'tracking-wider text-sm border-black border-b-2 pb-0.5 mx-auto mt-2 sm:tracking-normal sm:border-none'}>
+            <span
+                className={'tracking-wider text-sm border-black border-b-2 pb-0.5 mx-auto mt-2 sm:tracking-normal'}>
                 {text.toLowerCase().includes('rain')
-                ?
-                'rain'
-                :
-                text
+                    ?
+                    'rain'
+                    :
+                    text
                 }
             </span>
         </div>

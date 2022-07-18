@@ -1,11 +1,9 @@
-import './App.css';
-import {getWeatherApi} from './utils/getApi.ts'
+import './styles/App.css';
 import Dashboard from "./components/UI/Dashboard.tsx";
 import MainBoard from "./components/UI/MainBoard.tsx";
 import InputCity from "./components/UI/InputCity.tsx";
 import {useState} from "react";
 import {CSSTransition} from "react-transition-group";
-import {logDOM} from "@testing-library/react";
 import axios from "axios";
 
 function App() {
@@ -47,14 +45,14 @@ function App() {
             <InputCity onInputChange={(e) => setCity(e.target.value)}
                        onBtnClick={btnClick} value={city}/>
             <CSSTransition in={isOpen} timeout={300} classNames={'board'} unmountOnExit>
-            {
-                badCity
-                    ?
-                    <h1 className={'text-center text-red-700 underline font-bold text-3xl'}>City not found</h1>
-                    :
+                {
+                    badCity
+                        ?
+                        <h1 className={'text-center text-red-700 underline font-bold text-3xl'}>City not found</h1>
+                        :
 
                         <MainBoard darkMode={darkMode} apiObj={apiObj}/>
-                    }
+                }
             </CSSTransition>
         </div>
     );
