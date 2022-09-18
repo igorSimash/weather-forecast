@@ -20,10 +20,11 @@ function App() {
 
     const btnClick = async () => {
         setIsOpen(false)
-        await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=9c308fedbe2045ccbfb194318221103&q=${city}&days=5&aqi=no&alerts=no`)
+        await axios.get(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/2022-09-17/2022-09-19?unitGroup=metric&key=QQKJLP7MHDCKFZXJ9P4SAF55M&contentType=json`)
             .then(res => {
                 setBadCity(false)
                 setApiObj(res.data)
+                console.log(res);
             })
             .catch(() => {
                 setBadCity(true)
