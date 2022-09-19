@@ -11,3 +11,5 @@ You may also see any lint errors in the console.
 
 ## What did I use 
 `React` `TailwindCSS` `TypeScript` `JavaScript` `HTML` `CSS` ...
+
+https://weather-ihor.netlify.app
