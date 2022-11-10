@@ -20,11 +20,11 @@ function App() {
 
     const btnClick = async () => {
         setIsOpen(false)
-        await axios.get(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/2022-09-17/2022-09-19?unitGroup=metric&key=QQKJLP7MHDCKFZXJ9P4SAF55M&contentType=json`)
+        await axios.get(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/next2days?unitGroup=metric&include=days&key=ZK2MXZRRQLZALBZL2QKJRN6FR&contentType=json`)
             .then(res => {
                 setBadCity(false)
                 setApiObj(res.data)
-                console.log(res);
+                console.log(res.data.days[0].temp);
             })
             .catch(() => {
                 setBadCity(true)

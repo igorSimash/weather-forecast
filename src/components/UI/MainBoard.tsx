@@ -12,10 +12,10 @@ const MainBoard = ({apiObj, darkMode}) => {
                 <div className={'w-1/2 block self-center text-white'}>
                     <div className={'flex flex-col items-center text-center'}>
                         <span className={'font-semibold w-fit h-fit text-8xl sm:text-5xl'}>
-                            {apiObj.currentConditions.temp}°
+                            {apiObj.days[0].temp}°
                         </span>
                         <span className={'w-fit h-fit text-lg tracking-widest sm:text-sm sm:mt-3'}>
-                            {apiObj.currentConditions.conditions}
+                            {apiObj.days[0].conditions}
                         </span>
                     </div>
                     <div className={'flex justify-around mt-4 sm:text-sm sm:mt-11'}>
@@ -24,7 +24,7 @@ const MainBoard = ({apiObj, darkMode}) => {
                                 HUMIDITY
                             </span>
                             <span className={'mx-auto mt-2'}>
-                                {apiObj.currentConditions.humidity}%
+                                {apiObj.days[0].humidity}%
                             </span>
                         </div>
                         <div className={'flex flex-col'}>
@@ -33,11 +33,11 @@ const MainBoard = ({apiObj, darkMode}) => {
                                     WIND -
                                 </span>
                                 <span className={'lowercase pl-1.5'}>
-                                     {apiObj.currentConditions.winddir}°
+                                     {apiObj.days[0].winddir}°
                                 </span>
                             </div>
                             <span className={'mx-auto mt-2'}>
-                                {apiObj.currentConditions.windspeed} K/H
+                                {apiObj.days[0].windspeed} K/H
                             </span>
                         </div>
                     </div>
