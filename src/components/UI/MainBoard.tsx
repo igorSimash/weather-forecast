@@ -24,7 +24,7 @@ const MainBoard = ({apiObj, darkMode}) => {
                                 HUMIDITY
                             </span>
                             <span className={'mx-auto mt-2'}>
-                                {apiObj.days[0].humidity}%aaaaaaaaaaaaaaaaaaaaaaaaaa
+                                {apiObj.days[0].humidity}%
                             </span>
                         </div>
                         <div className={'flex flex-col'}>
