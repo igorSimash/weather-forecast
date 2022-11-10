@@ -20,7 +20,7 @@ function App() {
 
     const btnClick = async () => {
         setIsOpen(false)
-        await axios.get(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/next2days?unitGroup=metric&include=days&key=ZK2MXZRRQLZALBZL2QKJRN6FR&contentType=json`)
+        await axios.get(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/next3days?unitGroup=metric&include=days&key=ZK2MXZRRQLZALBZL2QKJRN6FR&contentType=json`)
             .then(res => {
                 setBadCity(false)
                 setApiObj(res.data)

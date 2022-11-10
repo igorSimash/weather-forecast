@@ -51,7 +51,7 @@ const MainBoard = ({apiObj, darkMode}) => {
             <div className={`bg-white h-1/2 rounded-b-xl flex items-center
             ${darkMode && 'bg-neutral-200 text-black'}`}>
                 <div className={'flex justify-around w-full'}>
-                    {apiObj.days.map((forecastDay, index) =>
+                    {apiObj.days.slice(1).map((forecastDay, index) =>
                         <WeatherDay key={index} text={forecastDay.conditions}
                                     temp={`${Math.round(forecastDay.tempmin)}° - ${Math.round(forecastDay.tempmax)}°`}
                                     day={forecastDay.datetime}/>
